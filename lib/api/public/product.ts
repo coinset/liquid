@@ -471,7 +471,7 @@ type ProductData = {
   id: string
   product_type: 'CurrencyPair' | (string & {})
   code: 'CASH' | (string & {})
-  name: string
+  name: string | null
   market_ask: number
   market_bid: number
   indicator: number
@@ -487,7 +487,7 @@ type ProductData = {
   high_market_ask: number
   volume_24h: number
   last_price_24h: number
-  last_traded_price: number
+  last_traded_price: number | null
   last_traded_quantity: number
   quoted_currency: LiquidSymbol & (string & {})
   base_currency: BaseCurrency & (string & {})
@@ -541,6 +541,6 @@ const fetchProduct: PublicAPI<ProductOptions, ProductResponse> = (
   })
 }
 
-export { fetchProduct }
+export { fetchProduct, reviver }
 
 export type { ProductData, ProductOptions, ProductResponse, SymbolUnit }
