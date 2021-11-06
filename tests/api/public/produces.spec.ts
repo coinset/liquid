@@ -7,7 +7,7 @@ describe('fetchProducts', () => {
   it('should return currency pairs info', async () => {
     const result = await fetchProducts()
 
-    expect(result).toEqual(expect.any(Array))
+    expect(result).toBeArray()
     result.forEach(forEachTest)
   })
 })

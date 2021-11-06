@@ -1,15 +1,6 @@
 import { fetchProduct } from '@/api/public/product'
 import type { ProductData, SymbolUnit } from '@/api/public/product'
 
-declare global {
-  // eslint-disable-next-line @typescript-eslint/no-namespace
-  namespace jest {
-    interface Matchers<R> {
-      toEqualOneOf(expected: unknown[]): R
-    }
-  }
-}
-
 const symbols: SymbolUnit[] = [
   'S$',
   'HK$',
@@ -121,34 +112,34 @@ const forEachTest = ({
   last_event_timestamp,
   timestamp
 }: ProductData) => {
-  expect(id).toEqual(expect.any(String))
+  expect(id).toBeString()
   expect(name).toEqualOneOf([expect.any(String), null])
-  expect(code).toMatch(/CASH/)
-  expect(product_type).toMatch(/CurrencyPair/)
+  expect(code).toBe('CASH')
+  expect(product_type).toBe('CurrencyPair')
   expect([...symbols, null]).toContain(symbol)
-  expect(base_currency).toEqual(expect.any(String))
-  expect(currency_pair_code).toEqual(expect.any(String))
+  expect(base_currency).toBeString()
+  expect(currency_pair_code).toBeString()
   expect(market_ask).toEqualOneOf([expect.any(Number), null])
   expect(market_bid).toEqualOneOf([expect.any(Number), null])
   expect(indicator).toEqualOneOf([expect.any(Number), null])
   expect(btc_minimum_withdraw).toBeNull()
   expect(fiat_minimum_withdraw).toBeNull()
-  expect(pusher_channel).toEqual(expect.any(String))
-  expect(taker_fee).toEqual(expect.any(Number))
-  expect(maker_fee).toEqual(expect.any(Number))
+  expect(pusher_channel).toBeString()
+  expect(taker_fee).toBeNumber()
+  expect(maker_fee).toBeNumber()
   expect(low_market_bid).toEqualOneOf([expect.any(Number), null])
   expect(high_market_ask).toEqualOneOf([expect.any(Number), null])
   expect(volume_24h).toEqualOneOf([expect.any(Number), null])
   expect(last_price_24h).toEqualOneOf([expect.any(Number), null])
   expect(last_traded_price).toEqualOneOf([expect.any(Number), null])
   expect(last_traded_quantity).toEqualOneOf([expect.any(Number), null])
-  expect(tick_size).toEqual(expect.any(Number))
-  expect(disabled).toEqual(expect.any(Boolean))
-  expect(margin_enabled).toEqual(expect.any(Boolean))
-  expect(cfd_enabled).toEqual(expect.any(Boolean))
-  expect(perpetual_enabled).toEqual(expect.any(Boolean))
-  expect(last_event_timestamp).toEqual(expect.any(Date))
-  expect(timestamp).toEqual(expect.any(Date))
+  expect(tick_size).toBeNumber()
+  expect(disabled).toBeBoolean()
+  expect(margin_enabled).toBeBoolean()
+  expect(cfd_enabled).toBeBoolean()
+  expect(perpetual_enabled).toBeBoolean()
+  expect(last_event_timestamp).toBeValidDate()
+  expect(timestamp).toBeValidDate()
 }
 
 export { forEachTest }
