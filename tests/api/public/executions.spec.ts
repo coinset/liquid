@@ -6,16 +6,16 @@ describe('fetchExecutions', () => {
       id: '1'
     })
 
-    expect(current_page).toEqual(expect.any(Number))
-    expect(total_pages).toEqual(expect.any(Number))
-    expect(models).toEqual(expect.any(Array))
+    expect(current_page).toBeNumber()
+    expect(total_pages).toBeNumber()
+    expect(models).toBeArray()
 
     models.forEach(({ id, quantity, price, taker_side, created_at }) => {
-      expect(id).toEqual(expect.any(Number))
-      expect(quantity).toEqual(expect.any(Number))
-      expect(price).toEqual(expect.any(Number))
-      expect(taker_side).toMatch(/buy|sell/)
-      expect(created_at).toEqual(expect.any(Date))
+      expect(id).toBeNumber()
+      expect(quantity).toBeNumber()
+      expect(price).toBeNumber()
+      expect(taker_side).toBeOneOf(['buy', 'sell'])
+      expect(created_at).toBeValidDate()
     })
   })
 })
