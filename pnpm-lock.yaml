@@ -26,7 +26,7 @@ specifiers:
   husky: ^7.0.4
   jest: ^27.3.1
   jest-extended: ^1.1.0
-  jest-extended-plus: ^1.0.0-beta.4
+  jest-extended-plus: ^1.0.0-beta.6
   jest-matcher-utils: ^27.3.1
   lint-staged: ^11.2.6
   node-fetch: ^2.6.6
@@ -69,7 +69,7 @@ devDependencies:
   husky: 7.0.4
   jest: 27.3.1
   jest-extended: 1.1.0
-  jest-extended-plus: 1.0.0-beta.4
+  jest-extended-plus: 1.0.0-beta.6
   jest-matcher-utils: 27.3.1
   lint-staged: 11.2.6
   npm-run-all: 4.1.5
@@ -4172,8 +4172,8 @@ packages:
       jest-util: 27.3.1
     dev: true
 
-  /jest-extended-plus/1.0.0-beta.4:
-    resolution: {integrity: sha512-i7M8iP9z/vxtwARFSVywqGBVGRbrbasDOqtGntjKbfVs4GQIuD7bQklY36cAxG5VaZl5rIU7++Qihz48IpK8cA==}
+  /jest-extended-plus/1.0.0-beta.6:
+    resolution: {integrity: sha512-iCVNTPngoSO/fyXUJ8NNudZKsxdP3CAI54MVeMINp9pm6anuBW0V6LXQ04wBH046x9J1r5gPex2w1ERXyanyHQ==}
     dependencies:
       expect: 27.3.1
       jest-matcher-utils: 27.3.1
