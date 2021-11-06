@@ -472,9 +472,9 @@ type ProductData = {
   product_type: 'CurrencyPair' | (string & {})
   code: 'CASH' | (string & {})
   name: string | null
-  market_ask: number
-  market_bid: number
-  indicator: number
+  market_ask: number | null
+  market_bid: number | null
+  indicator: number | null
   currency: LiquidSymbol & (string & {})
   currency_pair_code: string
   symbol: null | SymbolUnit | (string & {})
@@ -483,12 +483,12 @@ type ProductData = {
   pusher_channel: string
   taker_fee: number
   maker_fee: number
-  low_market_bid: number
-  high_market_ask: number
-  volume_24h: number
-  last_price_24h: number
+  low_market_bid: number | null
+  high_market_ask: number | null
+  volume_24h: number | null
+  last_price_24h: number | null
   last_traded_price: number | null
-  last_traded_quantity: number
+  last_traded_quantity: number | null
   quoted_currency: LiquidSymbol & (string & {})
   base_currency: BaseCurrency & (string & {})
   tick_size: number
