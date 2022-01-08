@@ -1,30 +1,29 @@
 import type {
-  EUR,
-  USD,
-  BTC,
-  USDT,
-  USDC,
-  ETH,
-  SGD,
-  JPY,
-  GYEN,
-  ZUSD,
-  XSGD,
-  HKD,
-  AUD,
-  CNY,
-  IDR,
-  PHP,
-  INR,
-  QASH,
-  BCH,
   ANCT,
-  GUSD,
+  AUD,
+  BCH,
+  BTC,
+  CNY,
   DAI,
-  IDRT
-} from 'cryptocurrency-types'
-
-type LiquidSymbol =
+  ETH,
+  EUR,
+  GUSD,
+  GYEN,
+  HKD,
+  IDR,
+  IDRT,
+  INR,
+  JPY,
+  PHP,
+  QASH,
+  SGD,
+  USD,
+  USDC,
+  USDT,
+  XSGD,
+  ZUSD,
+} from "../deps.ts";
+export type LiquidSymbol =
   | EUR
   | USD
   | BTC
@@ -47,6 +46,4 @@ type LiquidSymbol =
   | ANCT
   | GUSD
   | DAI
-  | IDRT
-
-export type { LiquidSymbol }
+  | IDRT;
