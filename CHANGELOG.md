@@ -1,3 +1,10 @@
+# [1.1.0-beta.1](https://github.com/coinset/liquid/compare/v1.0.1-beta.1...v1.1.0-beta.1) (2022-01-08)
+
+
+### Features
+
+* switch code base to deno ([32deed1](https://github.com/coinset/liquid/commit/32deed1ee6ed07f162b2e979bba1bef68bc39fb8))
+
 # [v1.0.1-beta.1](https://github.com/coinset/liquid/compare/v1.0.0...v1.0.1-beta.1) (2021-11-06)
 
 ## 🐛 Bug Fixes
